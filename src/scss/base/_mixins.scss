@@ -1,0 +1,29 @@
+@mixin mediaTablet {
+	@media screen and (max-width: var(--tablet-size)) {
+		@content;
+	}
+}
+
+@mixin mediaMobileLG {
+	@media screen and (max-width: var(--mobileLG-size)) {
+		@content;
+	}
+}
+
+@mixin mediaMobileMD {
+	@media screen and (max-width: var(--mobileMD-size)) {
+		@content;
+	}
+}
+
+@mixin mediaMobileSM {
+	@media screen and (max-width: var(--mobileSM-size)) {
+		@content;
+	}
+}
+
+@mixin mediaMobileXS {
+	@media screen and (max-width: var(--mobileXS-size)) {
+		@content;
+	}
+}
