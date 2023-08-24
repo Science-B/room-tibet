@@ -4,8 +4,98 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
+		<title>RoomTibet</title>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
-	<body></body>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__row">
+					<a href="./index.html">
+						<img class="header__logo" src="./img/header/logo.svg" alt="logo" />
+					</a>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__list-item">
+								<a class="nav__list-link" href="#!">Главная</a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__list-link" href="#!">Про гида</a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__list-link" href="#!">Программа тура</a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__list-link" href="#!">Стоимость</a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__list-link" href="#!">Блог</a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__list-link" href="#!">Контакты</a>
+							</li>
+						</ul>
+						<a href="#!" class="room-tibet__btn room-tibet__btn--small nav__btn"
+							>Консультация</a
+						>
+					</nav>
+				</div>
+				<div class="header__content">
+					<h1 class="header__title">
+						Насладись прогулкой в горах <br />
+						с командой единомышленников
+					</h1>
+					<form class="header__form" acction="#">
+						<label class="header__form-label">
+							<input
+								class="header__form-input"
+								placeholder="Локация для тура"
+								autocomplete="off" />
+							выберите из списка
+							<img
+								class="header__form-img"
+								src="./img/header/arrow.svg"
+								alt="arrow"
+						/></label>
+
+						<label class="header__form-label">
+							<input
+								id="air-datepicker"
+								type="text"
+								autocomplete="off"
+								class="header__form-input"
+								placeholder="Дата похода"
+								readonly
+								i />
+
+							Укажите диапазон
+							<img
+								class="header__form-img"
+								src="./img/header/formkit_date.svg"
+								alt="formkit_date"
+						/></label>
+						<label class="header__form-label">
+							<input
+								value="4"
+								class="header__form-input"
+								autocomplete="off"
+								placeholder="Участники" />
+							Минимум 4 человека<img
+								class="header__form-img"
+								src="./img/header/arrow.svg"
+								alt="formkit_date"
+						/></label>
+
+						<button
+							class="room-tibet__btn room-tibet__btn--accent header__form-button"
+							placeholder="Локация для тура"
+						>
+							Найти программу
+						</button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<script src="./js/index.bundle.js"></script>
+	</body>
 </html>
