@@ -15,6 +15,7 @@
 }
 
 .nav__list-link {
+	@include linkDecoration;
 }
 
 .nav__btn {
