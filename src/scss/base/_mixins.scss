@@ -9,13 +9,6 @@
 	// }
 }
 
-@mixin footerTitleDecoration {
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 120%;
-	margin-bottom: 20px;
-}
-
 @mixin mediaTablet {
 	@media screen and (max-width: var(--tablet-size)) {
 		@content;
