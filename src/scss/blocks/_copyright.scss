@@ -1,0 +1,23 @@
+.copyright {
+	padding: 24px 0px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 129%;
+	color: var(--white-text);
+	background-color: var(--dark-text);
+}
+
+.copyright__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.copyright__text {
+}
+
+.copyright__link {
+	&:hover {
+		text-decoration: underline;
+	}
+}
