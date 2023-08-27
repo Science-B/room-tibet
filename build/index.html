@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>RoomTibet</title>
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./files/libs/youtubeLightbox.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -96,6 +97,52 @@
 				</div>
 			</div>
 		</header>
+		<main class="main">
+			<section class="journey">
+				<div class="container">
+					<div class="journey__content">
+						<div class="journey__imgs">
+							<div class="journey__imgs-back-img">
+								<img src="./img/main/journey/front-img.png" alt="back-img" />
+							</div>
+
+							<a
+								href="https://www.youtube.com/watch?v=0kUkAxZlW44&ab_channel=AlexDrone"
+								class="journey__imgs-front-img"
+								data-youtubeLightbox
+							>
+								<img src="./img/main/journey/back-img.png" alt="front-img" />
+								<img
+									class="journey__imgs-play-btn"
+									src="./img/main/journey/play-btn.svg"
+									alt="play-btn"
+								/>
+							</a>
+						</div>
+						<div class="journey__info">
+							<h3 class="subtitle journey__info-subtitle">о нашем походе</h3>
+							<h2 class="title journey__info-title">
+								Исследуйте все горные массивы мира вместе с нами
+							</h2>
+							<p class="journey__info-text">
+								Его корни уходят в один фрагмент классической латыни 45 года
+								н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
+								профессор латыни из колледжа Hampden-Sydney, штат Вирджиния,
+								взял одно из самых странных слов в Lorem Ipsum, "consectetur"и
+								занялся его поисками в классической латинской литературе.
+							</p>
+
+							<a
+								class="room-tibet__btn room-tibet__btn--small journey__info-btn"
+								href="#!"
+								>Программа тура</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="programs"><div class="container"></div></section>
+		</main>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__content">
@@ -242,6 +289,14 @@
 				</div>
 			</div>
 		</section>
+		<div id="youtubelightbox" class="youtubelightbox">
+			<div class="youtubelightbox__centeredchild">
+				<div class="youtubelightbox__videowrapper">
+					<div id="youtubelightboxPlayer"></div>
+				</div>
+			</div>
+		</div>
+		<script src="./files/libs/youtubeLightbox.js"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>
