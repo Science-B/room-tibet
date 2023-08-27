@@ -1,0 +1,23 @@
+.program-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 23px;
+}
+
+.program-card__img {
+	max-width: 36px;
+	max-height: 36px;
+}
+
+.program-card__title {
+	font-weight: 700;
+	line-height: 111%;
+	letter-spacing: 0.216px;
+	margin-bottom: 4px;
+}
+
+.program-card__text {
+	font-size: 14px;
+	line-height: 143%;
+}
