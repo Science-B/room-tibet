@@ -1,0 +1,62 @@
+.cta {
+	position: relative;
+}
+
+.cta__content {
+	display: flex;
+	padding: 40px 100px;
+	gap: 64px;
+	box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
+	background-color: var(--page-bg);
+	border-radius: 6px;
+	transform: translateY(50%);
+}
+.cta__header {
+	max-width: 380px;
+}
+
+.cta__subtitle {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+.cta__title {
+	font-size: 26px;
+}
+
+.cta__form {
+	fieldset {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 16px;
+		margin-bottom: 8px;
+	}
+}
+
+.cta__label {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 125%;
+	margin-bottom: 8px;
+}
+
+.cta__input {
+	padding: 16px;
+	background: #f3f5f4;
+	color: #18121e;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 143%;
+}
+
+.cta__privacy-text {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 129%;
+
+	a {
+		color: var(--dark-text);
+		text-decoration: underline;
+	}
+}
