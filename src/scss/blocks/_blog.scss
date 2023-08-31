@@ -37,6 +37,11 @@
 
 	img {
 		border-radius: 6px;
+		transition: all 0.2s ease-in;
+
+		&:hover {
+			transform: scale(0.99);
+		}
 	}
 }
 
