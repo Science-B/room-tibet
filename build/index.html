@@ -7,6 +7,7 @@
 		<title>RoomTibet</title>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./files/libs/youtubeLightbox.css" />
+		<link rel="stylesheet" href="./files/libs/custom-select.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -46,47 +47,52 @@
 						Насладись прогулкой в горах <br />
 						с командой единомышленников
 					</h1>
-					<form class="header__form" acction="#">
-						<label class="header__form-label">
-							<input
-								class="header__form-input"
-								placeholder="Локация для тура"
-								autocomplete="off" />
-							выберите из списка
-							<img
-								class="header__form-img"
-								src="./img/header/arrow.svg"
-								alt="arrow"
-						/></label>
+					<form class="header__form" acction="#" id="form-program">
+						<label id="locations" class="header__form-label">
+							<select
+								form="form-program"
+								class="header__form-select"
+								name="locations"
+								id="locations"
+							>
+								<option value="Локация 1">Локация 1</option>
+								<option value="Локация 2">Локация 2</option>
+								<option value="Локация 3">Локация 3</option>
+							</select>
 
+							<p>выберите из списка</p>
+							<img src="../img/header/arrow.svg" alt="arrow-icon" />
+						</label>
 						<label class="header__form-label">
 							<input
-								id="air-datepicker"
 								type="text"
-								autocomplete="off"
-								class="header__form-input"
 								placeholder="Дата похода"
-								readonly
-								i />
-
-							Укажите диапазон
-							<img
-								class="header__form-img"
-								src="./img/header/formkit_date.svg"
-								alt="formkit_date"
-						/></label>
-						<label class="header__form-label">
-							<input
-								value="4"
-								class="header__form-input"
+								id="air-datepicker"
 								autocomplete="off"
-								placeholder="Участники" />
-							Минимум 4 человека<img
-								class="header__form-img"
-								src="./img/header/arrow.svg"
-								alt="formkit_date"
-						/></label>
+								class="header__form-input date"
+							/>
+							<img
+								src="../img/header/formkit_date.svg"
+								alt="formkit-date-icon"
+							/>
+							<p>укажите диапазон</p>
+						</label>
+						<label id="travelers" class="header__form-label">
+							<select
+								form-program
+								class="header__form-select"
+								name="travelers"
+								id="travelers"
+							>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value=">7">7 и больше</option>
+							</select>
+							<img src="../img/header/arrow.svg" alt="arrow-icon" />
 
+							<p>минимум 4 человека</p>
+						</label>
 						<button
 							class="room-tibet__btn room-tibet__btn--accent header__form-button"
 							placeholder="Локация для тура"
@@ -630,6 +636,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="./files/libs/custom-select.min.js"></script>
 		<script src="./files/libs/youtubeLightbox.js"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>
