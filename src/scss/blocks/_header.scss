@@ -48,30 +48,38 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	gap: 8px;
 	color: var(--page-bg);
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 150%;
-}
 
-.header__form-img {
-	top: 12px;
-	right: 15px;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	pointer-events: none;
+	p {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+
+	img {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		right: 10px;
+		top: 20%;
+		transition: rotate 0.2s linear;
+
+		&.active {
+			transform: rotate(180deg);
+		}
+	}
 }
 
 .header__form-input {
-	position: relative;
-	padding: 14px 16px;
+	display: block;
+	padding: 14px 42px 14px 16px;
 	border-radius: 8px;
 	border: 1px solid var(--page-bg);
+	margin-bottom: 8px;
 
 	&::placeholder {
-		position: relative;
 		color: var(--white-text);
 		font-size: 16px;
 		font-weight: 700;
@@ -80,5 +88,5 @@
 }
 
 .header__form-btn {
-	max-height: 5px;
+	max-height: 52px;
 }

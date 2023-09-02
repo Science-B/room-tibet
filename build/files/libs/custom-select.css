@@ -1,0 +1,109 @@
+.custom-select-container {
+	position: relative;
+	box-sizing: border-box;
+}
+.custom-select-container * {
+	box-sizing: border-box;
+}
+.custom-select-container.is-disabled {
+	opacity: 0.333;
+}
+.custom-select-opener {
+	/* background-color: #ccc; */
+	/* padding: 0.5em; */
+	display: block;
+	cursor: pointer;
+	/* vvv CUSTOM vvv */
+	padding: 14px 42px 14px 16px;
+	border: 1px solid var(--page-bg);
+	height: 53.78px;
+	border-radius: 6px;
+}
+.custom-select-opener span {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.custom-select-container select {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.custom-select-panel {
+	max-height: 0;
+	transition: max-height 0.2s ease-out, overflow-y 0.1s 0.5s;
+	overflow: hidden;
+	position: absolute;
+	top: 100%;
+	z-index: 1;
+	width: 100%;
+	margin-top: -23px;
+
+	/* vvv CUSTOM vvv */
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 150%;
+}
+.custom-select-container.is-open .custom-select-panel {
+	max-height: 10.7em;
+	overflow-y: auto;
+	/* vvv CUSTOM vvv */
+	background-color: var(--btn-bg);
+}
+.custom-select-option {
+	padding: 0.5em;
+}
+.custom-select-option.has-focus {
+	background-color: var(--page-bg);
+}
+.custom-select-option.is-selected::before {
+	content: "✔";
+	padding-right: 0.5em;
+}
+.custom-select-optgroup > .custom-select-option {
+	padding-left: 2em;
+}
+.custom-select-optgroup::before {
+	content: attr(data-label);
+	display: block;
+}
+
+/* ------- OVERRIDES ------------ */
+
+/* Custom select */
+
+/* Structure Classes */
+
+/* containerClass: 'custom-select-container' may have isDisabledClass, isOpenClass */
+.custom-select-container {
+	padding-top: 0px;
+}
+
+/* panelClass: 'custom-select-panel' */
+.custom-select-panel {
+	font-size: 14px;
+	top: calc(100% + 22px);
+	box-shadow: 0px 5px 20px rgb(8 41 55 / 34%);
+}
+
+/* optionClass: 'custom-select-option' may have isSelectedClass, hasFocusClass */
+.custom-select-option {
+	padding: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+
+.custom-select-option.is-selected {
+	font-weight: 600;
+}
+
+.custom-select-option.is-selected::before {
+	content: none;
+}
+
+.custom-select-option.has-focus {
+	color: var(--btn-bg);
+	background-color: var(--page-bg);
+}
