@@ -985,6 +985,11 @@ body {
   margin-bottom: 40px;
 }
 
+.programs__text {
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+
 .programs__info-subtitle {
   margin-bottom: 8px;
 }
