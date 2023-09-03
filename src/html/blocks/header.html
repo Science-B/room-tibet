@@ -1,0 +1,100 @@
+<header class="header">
+	<div class="container">
+		<div class="header__row">
+			<a href="./index.html">
+				<img class="header__logo" src="./img/header/logo.svg" alt="logo" />
+			</a>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__list-item">
+						<a class="nav__list-link" href="#!">Главная</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__list-link" href="#!">Про гида</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__list-link" href="#!">Программа тура</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__list-link" href="#!">Стоимость</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__list-link" href="#!">Блог</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__list-link" href="#!">Контакты</a>
+					</li>
+				</ul>
+				<button class="mobile-nav-btn">
+					<div class="nav-icon"></div>
+				</button>
+				<a href="#!" class="room-tibet__btn room-tibet__btn--small nav__btn"
+					>Консультация</a
+				>
+			</nav>
+		</div>
+		<div class="header__content">
+			<h1 class="header__title">
+				Насладись прогулкой в горах <br />
+				с командой единомышленников
+			</h1>
+			<form class="header__form" acction="#" id="form-program">
+				<label id="locations" class="header__form-label">
+					<select
+						form="form-program"
+						class="header__form-select"
+						name="locations"
+						id="locations"
+					>
+						<option value="Локация 1">Локация 1</option>
+						<option value="Локация 2">Локация 2</option>
+						<option value="Локация 3">Локация 3</option>
+					</select>
+
+					<p>выберите из списка</p>
+					<img src="../img/header/arrow.svg" alt="arrow-icon" />
+				</label>
+				<label class="header__form-label">
+					<input
+						type="text"
+						placeholder="Дата похода"
+						id="air-datepicker"
+						autocomplete="off"
+						class="header__form-input date"
+					/>
+					<img src="../img/header/formkit_date.svg" alt="formkit-date-icon" />
+					<p>укажите диапазон</p>
+				</label>
+				<label id="travelers" class="header__form-label">
+					<select
+						form-program
+						class="header__form-select"
+						name="travelers"
+						id="travelers"
+					>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value=">7">7 и больше</option>
+					</select>
+					<img src="../img/header/arrow.svg" alt="arrow-icon" />
+
+					<p>минимум 4 человека</p>
+				</label>
+				<button
+					class="room-tibet__btn room-tibet__btn--accent header__form-button"
+					placeholder="Локация для тура"
+				>
+					Найти программу
+				</button>
+			</form>
+			<button
+				class="room-tibet__btn room-tibet__btn--accent header__button"
+				placeholder="Локация для тура"
+			>
+				Найти программу
+			</button>
+		</div>
+	</div>
+</header>
+@@include('mobile-nav.html')

@@ -9,6 +9,10 @@
 	align-items: center;
 	gap: 24px;
 	font-weight: 600;
+
+	@include mediaTabletLG {
+		display: none;
+	}
 }
 
 .nav__list-item {
@@ -19,4 +23,7 @@
 }
 
 .nav__btn {
+	@media screen and (max-width: 1035px) {
+		display: none;
+	}
 }
