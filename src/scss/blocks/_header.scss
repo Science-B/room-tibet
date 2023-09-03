@@ -4,6 +4,10 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom center;
+
+	@include mediaTabletMD {
+		min-height: unset;
+	}
 }
 
 .header__row {
@@ -11,6 +15,10 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 463px;
+
+	@include mediaTabletMD {
+		margin-bottom: 234px;
+	}
 }
 
 .header__logo {
@@ -32,6 +40,18 @@
 	line-height: 150%;
 	letter-spacing: 1px;
 	margin-bottom: 41px;
+
+	@include mediaTabletMD {
+		font-size: 36px;
+	}
+
+	@include mediaMobileLG {
+		font-size: 28px;
+	}
+
+	@include mediaMobileXS {
+		font-size: 22px;
+	}
 }
 
 .header__form {
@@ -42,6 +62,14 @@
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(1px);
+
+	@media screen and (max-width: 1213px) {
+		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	}
+
+	@media screen and (max-width: 680px) {
+		display: none;
+	}
 }
 
 .header__form-label {
@@ -89,4 +117,16 @@
 
 .header__form-btn {
 	max-height: 52px;
+}
+
+.header__button {
+	display: none;
+
+	@media screen and (max-width: 680px) {
+		display: block;
+	}
+
+	@include mediaMobileXS {
+		font-size: 12px;
+	}
 }
