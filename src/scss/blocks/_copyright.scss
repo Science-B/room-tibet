@@ -5,15 +5,23 @@
 	line-height: 129%;
 	color: var(--white-text);
 	background-color: var(--dark-text);
+
+	@media screen and (max-width: 443px) {
+		padding: 12px 0px;
+		font-size: 12px;
+	}
 }
 
 .copyright__row {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
+	gap: 20px;
 
-.copyright__text {
+	@media screen and (max-width: 443px) {
+		flex-direction: column;
+		gap: 5px;
+	}
 }
 
 .copyright__link {
