@@ -1,3 +1,68 @@
-.swiper-slide {
-	max-width: 380px;
+.popular__tours-swiper {
+	.swiper-slide {
+		max-width: 380px;
+
+		@include mediaMobileLG {
+			max-width: 285px;
+		}
+	}
+}
+
+.blog-swiper {
+	.swiper-wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(270px, 580px));
+		gap: 20px;
+		margin-bottom: 24px;
+
+		@media screen and (max-width: 1210px) {
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+		}
+
+		@media screen and (max-width: 589px) {
+			gap: unset;
+			display: flex;
+		}
+	}
+
+	.swiper-slide {
+		@media screen and (max-width: 589px) {
+			max-width: 80%;
+		}
+
+		@include mediaMobileSM {
+			max-width: 285px;
+		}
+	}
+}
+
+.photos__swiper {
+	.swiper-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		margin-bottom: 40px;
+
+		@media screen and (max-width: 1210px) {
+			justify-content: unset;
+			gap: unset;
+		}
+
+		.swiper-slide {
+			width: 280px;
+
+			&--wide {
+				width: 580px;
+
+				@media screen and (max-width: 1210px) {
+					width: 280px;
+				}
+			}
+		}
+
+		@media screen and (max-width: 1210px) {
+			flex-wrap: nowrap;
+		}
+	}
 }

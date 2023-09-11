@@ -11,10 +11,21 @@
 			opacity: 1;
 		}
 	}
+
+	@include mediaTabletLG {
+		.card__tours-overlay,
+		.card__tours-rating {
+			opacity: 1;
+		}
+	}
 }
 .card__tours-img {
 	height: 500px;
 	border-radius: 32px;
+
+	@include mediaMobileLG {
+		height: 400px;
+	}
 }
 
 .card__tours-overlay {
