@@ -9,6 +9,32 @@
 	// }
 }
 
+@mixin sectionTitle {
+	margin-bottom: 40px;
+
+	@include mediaTabletMD {
+		font-size: 24px;
+	}
+
+	@include mediaMobileMD {
+		margin-bottom: 32px;
+	}
+}
+
+@mixin sectionSubtitle {
+	margin-bottom: 8px;
+
+	@include mediaTabletMD {
+		font-size: 16px;
+	}
+}
+
+@mixin sectionButton {
+	@include mediaTabletLG {
+		text-align: center;
+	}
+}
+
 @mixin mediaTabletLG {
 	@media screen and (max-width: $tabletLG-size) {
 		@content;

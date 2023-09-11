@@ -1,5 +1,9 @@
 .journey {
 	padding: 100px 0px;
+
+	@include mediaTabletMD {
+		padding: 50px 0px;
+	}
 }
 
 .journey__content {
@@ -8,10 +12,32 @@
 	display: flex;
 	gap: 160px;
 	justify-content: space-between;
+
+	@media screen and (max-width: 885px) {
+		gap: 20px;
+	}
+
+	@include mediaTabletMD {
+		flex-direction: column-reverse;
+		gap: 40px;
+	}
 }
 
 .journey__imgs {
 	position: relative;
+
+	@media screen and (max-width: 885px) {
+		min-width: 350px;
+		height: 400px;
+	}
+
+	@include mediaMobileMD {
+		min-width: inherit;
+	}
+
+	@include mediaMobileSM {
+		height: 286px;
+	}
 }
 
 .journey__imgs-back-img {
@@ -34,13 +60,17 @@
 	&:hover::before {
 		background: rgba(36, 43, 51, 0.1);
 	}
+
+	@media screen and (max-width: 885px) {
+		display: none;
+	}
 }
 
 .journey__imgs-front-img {
 	position: absolute;
+	width: 350px;
 	left: 130px;
 	top: 127px;
-	width: 350px;
 	height: 350px;
 
 	&::before {
@@ -54,45 +84,91 @@
 
 		background: rgba(36, 43, 51, 0.2);
 		transition: background-color 0.2s ease-in;
+
+		@include mediaMobileMD {
+			height: 333.5px;
+		}
+
+		@include mediaMobileSM {
+			height: 286px;
+		}
 	}
 
 	&:hover::before {
 		background: rgba(36, 43, 51, 0.1);
+	}
+
+	@media screen and (max-width: 885px) {
+		left: 0;
+		top: 75px;
+	}
+
+	@include mediaTabletMD {
+		top: 0;
+		left: 50%;
+		transform: translate(-50%);
+	}
+
+	@include mediaMobileMD {
+		width: 290px;
+		height: 350px;
+	}
+
+	@include mediaMobileSM {
+		width: 250px;
+		height: 300px;
 	}
 }
 
 .journey__imgs-play-btn {
 	position: absolute;
 	left: 50%;
-	top: 57%;
+	top: 50%;
 	padding: 14px;
 	width: 55px;
 	height: 55px;
 	border-radius: 50%;
 	background-color: rgba(253, 253, 253, 0.6);
-	transform: translate(-50%, -50%);
+	transform: translate(-50%);
 	transition: all 0.2s ease-in;
 
 	&:hover {
-		transform: translate(-50%, -50%) scale(1.2);
+		transform: translate(-50%) scale(1.2);
 		filter: saturate(1.5);
+	}
+
+	@include mediaMobileMD {
+		top: 40%;
+	}
+
+	@include mediaMobileSM {
 	}
 }
 
 .journey__info {
 	max-width: 580px;
 	padding: 64px 0px;
+
+	@include mediaTabletMD {
+		max-width: unset;
+		font-size: 16px;
+		padding: 0px;
+	}
 }
 
 .journey__info-subtitle {
-	margin-bottom: 8px;
+	@include sectionSubtitle;
 }
 
 .journey__info-title {
-	margin-bottom: 40px;
+	@include sectionTitle;
 }
 
 .journey__info-text {
 	line-height: 150%;
 	margin-bottom: 40px;
+}
+
+.journey__info-btn {
+	@include sectionButton;
 }

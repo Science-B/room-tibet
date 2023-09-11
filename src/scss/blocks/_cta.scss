@@ -1,5 +1,9 @@
 .cta {
 	position: relative;
+
+	@media screen and (max-width: 771px) {
+		padding: 50px 0px;
+	}
 }
 
 .cta__content {
@@ -10,6 +14,13 @@
 	background-color: var(--page-bg);
 	border-radius: 6px;
 	transform: translateY(50%);
+
+	@media screen and (max-width: 771px) {
+		padding: 24px;
+		gap: unset;
+		flex-direction: column;
+		transform: unset;
+	}
 }
 .cta__header {
 	max-width: 380px;
@@ -17,11 +28,15 @@
 
 .cta__subtitle {
 	font-size: 18px;
-	margin-bottom: 8px;
+	@include sectionSubtitle;
 }
 
 .cta__title {
 	font-size: 26px;
+
+	@media screen and (max-width: 771px) {
+		margin-bottom: 18px;
+	}
 }
 
 .cta__form {
@@ -30,6 +45,11 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 16px;
 		margin-bottom: 8px;
+
+		@media screen and (max-width: 771px) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 }
 
@@ -58,5 +78,11 @@
 	a {
 		color: var(--dark-text);
 		text-decoration: underline;
+	}
+}
+
+.cta__button {
+	@media screen and (max-width: 771px) {
+		max-width: 78%;
 	}
 }
